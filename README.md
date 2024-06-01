@@ -31,17 +31,22 @@ Install the dependencies:
 
 
 ```bash
+cd frontend
 npm install
-# or
-yarn install
+and
+cd backend
+npm install
+
 ```
 # Running the App
 
 Start the development server:
 ```bash
-npm start
-# or
-yarn start
+cd frontend
+npm run dev
+and
+cd backend
+nodemon server.js
 ```
 
 # API Endpoints

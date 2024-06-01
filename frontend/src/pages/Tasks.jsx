@@ -24,7 +24,7 @@ const Tasks = () => {
       dispatch(signOutUserStart());
       const res = await fetch('/api/v1/auth/signout');
       const data = await res.json();
-      console.log("signed out");
+      //console.log("signed out");
       if (data.success === false) {
         dispatch(signinFailure(data.message));
         return;
@@ -75,7 +75,7 @@ const Tasks = () => {
 
   useEffect(() => {
     fetchTasks();
-  }, [isModalOpen]);
+  }, [isModalOpen,tasks]);
 
   const handleDelete = async (taskId) => {
     try {
@@ -86,7 +86,7 @@ const Tasks = () => {
         },
       });
       const data = await res.json();
-      console.log(data);
+      // console.log(data);
       if (!data.success) {
         return;
       }
@@ -98,7 +98,7 @@ const Tasks = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
+    // console.log(formData);
     try {
       const res = await fetch(isEdit ? `/api/v1/task/update/${currentTaskId}` : '/api/v1/task/create', {
         method: isEdit ? 'PUT' : 'POST',

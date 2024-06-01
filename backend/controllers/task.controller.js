@@ -7,7 +7,7 @@ export const createTask = async (req, res, next) => {
   const userId = req.user.id;
    // Assuming req.user is set by the authentication middleware
 
-   console.log(title,description,userId)
+  //  console.log(title,description,userId)
 
   try {
     const newTask = new Task({
@@ -69,7 +69,7 @@ export const updateTask = async (req, res, next) => {
 
 // Delete a task
 export const deleteTask = async (req, res, next) => {
-  console.log(req.params)
+  // console.log(req.params)
   const { id } = req.params;
 
   try {

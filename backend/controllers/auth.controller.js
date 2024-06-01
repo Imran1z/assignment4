@@ -6,7 +6,7 @@ import jwt from 'jsonwebtoken'
 
 const JWT_SECRET="noor12334jahan"
 export const signup =async(req, res,next)=>{
-    console.log(req.body);
+    // console.log(req.body);
      const {username,email,password}=req.body;
     try {
         const hashedPassword=bcryptjs.hashSync(password,12);
@@ -26,7 +26,7 @@ export const signup =async(req, res,next)=>{
 }
 export const signin =async(req, res, next)=>{
     const {email,password}=req.body;
-    console.log(email,password)
+    // console.log(email,password)
 
     try {
         const validUser = await User.findOne({ email });

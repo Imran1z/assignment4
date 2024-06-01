@@ -16,7 +16,7 @@ const Signin = () => {
 
       const handleSubmit=async(e)=>{
         e.preventDefault();
-        console.log(formData)
+        // console.log(formData)
     
         try {
           dispatch(signinStart());
@@ -29,7 +29,7 @@ const Signin = () => {
           })
     
           const data = await res.json();
-          console.log(data);
+          // console.log(data);
           if (data.success === false) {
             dispatch(signinFailure(data.message))
             return;

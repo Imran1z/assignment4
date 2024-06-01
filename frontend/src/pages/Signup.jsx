@@ -16,7 +16,7 @@ const Signup = () => {
       const handleSubmit=async(e)=>{
         e.preventDefault();
 
-        console.log(formData)
+        // console.log(formData)
 
         try {
             setLoading(true);
@@ -29,7 +29,7 @@ const Signup = () => {
             })
       
             const data = await res.json();
-            console.log(data);
+            // console.log(data);
             if (data.success === false) {
               setLoading(false);
               setError(data.message);

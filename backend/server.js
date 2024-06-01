@@ -5,6 +5,7 @@ import express from 'express'
 import mongoose from 'mongoose';
 import cookieParser from 'cookie-parser';
 import authRouter from './routes/auth.routes.js'
+import taskRouter from './routes/task.routes.js'
 
 
 const app= express();
@@ -26,6 +27,7 @@ app.listen(PORT,()=>{
 })
 
 app.use('/api/v1/auth',authRouter)
+app.use('/api/v1/task',taskRouter)
 
 
 

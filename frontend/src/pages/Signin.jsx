@@ -35,7 +35,7 @@ const Signin = () => {
             return;
           }
           dispatch(signinSuccess(data))
-          navigate('/');
+          navigate('/tasks');
         } catch (error) {
           dispatch(signinFailure(error.message))
     
@@ -48,7 +48,7 @@ const Signin = () => {
 
       
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <div className="min-h-screen flex items-center justify-center ">
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
         <h2 className="text-2xl font-bold mb-6 text-gray-800">Sign In</h2>
         <form onSubmit={handleSubmit} className="space-y-6">
@@ -79,7 +79,7 @@ const Signin = () => {
           <button
           disabled={loading}
             type="submit"
-            className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-gray-600 hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-600"
           >
           {loading ? 'Loading...' : 'Sign In'}
           </button>

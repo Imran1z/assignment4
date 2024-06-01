@@ -1,109 +1,65 @@
-Task Management App
-This is a simple task management application built with React and Redux. It allows users to sign in, add, edit, delete, and view their tasks. The app uses a modal for task creation and editing, providing a seamless user experience.
+# Task Management App
 
-Table of Contents
-Features
-Prerequisites
-Installation
-Running the App
-File Structure
-Usage
-API Endpoints
-Contributing
-License
-Features
-User Authentication (Sign in, Sign out)
-Add New Tasks
-Edit Existing Tasks
-Delete Tasks
-View User's Tasks
-Prerequisites
-Before you begin, ensure you have met the following requirements:
+This Task Management App is a simple and intuitive application built with React, Redux, and JWT authentication. It provides users with the ability to manage their tasks effectively. The app supports user sign-up, sign-in, and sign-out functionalities. Once authenticated, users can create, update, and delete their tasks.
 
-Node.js installed on your machine
-npm (Node Package Manager) or yarn
-Installation
+# Brief Introduction
+The Task Management App leverages modern web development technologies and tools to ensure a smooth and efficient user experience. Here are some of the key aspects:
+
+1. JWT Authentication: The app uses JSON Web Tokens (JWT) to secure user authentication and authorization. This ensures that only authenticated users can access their tasks and perform actions like create, update, and delete.
+
+2. Task Management: Users can add new tasks, edit existing ones, and delete tasks they no longer need. Each task can be marked as complete or incomplete.
+ 
+3. User Authentication: The app includes user sign-up, sign-in, and sign-out functionalities to manage user sessions securely.
+
+4. Modern Tools: The app is built using Vite for fast development, React for the user interface, Redux for state management, and Nodemon to automatically restart the server during development.
+
+
+
+
+# Installation
+
 Clone the repository:
 
-sh
-Copy code
-git clone https://github.com/your-username/task-management-app.git
-cd task-management-app
+
+
+```bash
+https://github.com/Imran1z/assignment4
+```
+
 Install the dependencies:
 
-sh
-Copy code
+
+
+```bash
 npm install
 # or
 yarn install
-Running the App
-Start the development server:
+```
+# Running the App
 
-sh
-Copy code
+Start the development server:
+```bash
 npm start
 # or
 yarn start
-Open your browser and navigate to http://localhost:3000.
+```
 
-File Structure
-java
-Copy code
-task-management-app/
-├── public/
-│   └── index.html
-├── src/
-│   ├── components/
-│   │   ├── TaskCard.jsx
-│   │   └── PrivateRoute.jsx
-│   ├── pages/
-│   │   ├── Tasks.jsx
-│   │   └── SignIn.jsx
-│   ├── redux/
-│   │   ├── store.js
-│   │   └── user/
-│   │       ├── userSlice.js
-│   ├── App.css
-│   ├── App.jsx
-│   └── index.jsx
-├── .gitignore
-├── package.json
-└── README.md
-Usage
-User Authentication
-Sign In: Navigate to the sign-in page and enter your credentials.
-Sign Out: Click the "Sign Out" button to log out of the application.
-Managing Tasks
-Add Task: Click the "Add Task" button to open the modal and enter the task details.
-Edit Task: Click the "Edit" button on a task card to open the modal with pre-filled data and update the task details.
-Delete Task: Click the "Delete" button on a task card to remove the task.
-Task Modal
-Task Title: Enter the title of the task.
-Task Description: Enter the description of the task.
-Complete: Mark the task as complete or incomplete using the checkbox.
-API Endpoints
-Authentication
-POST /api/v1/auth/signin: Sign in a user.
-POST /api/v1/auth/signout: Sign out the user.
-Tasks
-GET /api/v1/task/userTask: Fetch all tasks for the signed-in user.
-POST /api/v1/task/create: Create a new task.
-PUT /api/v1/task/update/:taskId: Update an existing task.
-DELETE /api/v1/task/delete/:taskId: Delete a task.
-Contributing
-To contribute to this project, follow these steps:
+# API Endpoints
 
-Fork the repository.
-Create a new branch:
-sh
-Copy code
-git checkout -b feature/your-feature-name
-Make your changes and commit them:
-sh
-Copy code
-git commit -m 'Add some feature'
-Push to the branch:
-sh
-Copy code
-git push origin feature/your-feature-name
-Create a pull request.
+## Authentication
+
+1. POST /api/v1/auth/signup: Sign up a new user.
+
+2. POST /api/v1/auth/signin: Sign in a user.
+
+3. POST /api/v1/auth/signout: Sign out the user.
+
+#Tasks
+
+1. GET /api/v1/task/userTask: Fetch all tasks for the signed-in user.
+
+2. POST /api/v1/task/create: Create a new task.
+
+3. PUT /api/v1/task/update/:taskId: Update an existing task.
+
+4. DELETE /api/v1/task/delete/:taskId: Delete a task
